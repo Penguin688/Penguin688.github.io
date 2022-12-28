@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Zip Zap Zop</title>
+</head>
+  <h2 id = "status">Zip</h2>
+  <h3>Your score is: <a id = "score"></a></h3>
+  <div>
+    <button onclick = "test()">Zip</button>
+    <button onclick = "test1()">Zap</button>
+    <button onclick = "test2()">Zop</button>
+  </div>
+  <div>
+    <button onclick = "test3()">Zirp</button>
+    <button onclick = "test4()">Zarp</button>
+    <button onclick = "test5()">Zorp</button>
+  </div>
+  <audio loop id = "audio">
+    <source src = "ibrahim - bullet train fantasy.mp3">
+  </audio>
+  <audio id = "audio1">
+    <source src = "Crunch2 (1).wav">
+  </audio>
+  <audio id = "audio2">
+    <source src = "Flag (2).wav">
+  </audio>
+
+<body>
+  <script>
+
+    var audio = document.getElementById("audio");
+
+    var audio1 = document.getElementById("audio1");
+
+    var audio2 = document.getElementById("audio2");
+
+    var Zip = "Zip";
+
+    var Zap = "Zap";
+
+    var Zop = "Zop";
+
+    var Zirp = "Zirp";
+
+    var Zarp = "Zarp";
+
+    var Zorp = "Zorp";
+
+    var score = 0;
+
+    var Random = 1;
+
+    var time = 30;
+
+    setInterval(GO, 2000)
+
+    function GO() {
+      Random = Math.floor(Math.random()*6);
+      if (Random == 0) {
+        document.getElementById("status").innerHTML = Zip;
+      }
+      else if (Random == 1) {
+        document.getElementById("status").innerHTML = Zap;
+      }
+      else if (Random == 2) {
+        document.getElementById("status").innerHTML = Zop;
+      }
+      else if (Random == 3) {
+        document.getElementById("status").innerHTML = Zirp;
+      }
+      else if (Random == 4) {
+        document.getElementById("status").innerHTML = Zarp;
+      }
+      else {
+        document.getElementById("status").innerHTML = Zorp;
+      }
+      audio.play()
+      time = 30;
+    }
+
+    function test() {
+      if (Random == 0) {
+        audio2.play()
+        score+=time;
+        document.getElementById("score").innerHTML = score;
+      }
+      else {
+        if (score > 1) {
+          score-=10;
+          document.getElementById("score").innerHTML = score;
+          audio1.play()       
+        }
+      }
+      GO()
+    }
+
+    function test1() {
+      if (Random == 1) {
+        audio2.play()
+        score+=time;
+        document.getElementById("score").innerHTML = score;
+      }
+      else {
+        if (score > 1) {
+          score-=10;
+          document.getElementById("score").innerHTML = score;
+          audio1.play()
+        }
+      }
+      GO()
+    }
+
+    function test2() {
+      if (Random == 2) {
+        audio2.play()
+        score+=time;
+        document.getElementById("score").innerHTML = score;
+      }
+      else {
+        if (score > 1) {
+          score-=10;
+          document.getElementById("score").innerHTML = score;
+          audio1.play()
+        }
+      }
+      GO()
+    }
+
+    function test3() {
+      if (Random == 3) {
+        audio2.play()
+        score+=time;
+        document.getElementById("score").innerHTML = score;
+      }
+      else {
+        if (score > 1) {
+          score-=10;
+          document.getElementById("score").innerHTML = score;
+          audio1.play()
+        }
+      }
+      GO()
+    }
+
+    function test4() {
+      if (Random == 4) {
+        audio2.play() 
+        score+=time;
+        document.getElementById("score").innerHTML = score;
+      }
+      else {
+        if (score > 1) {
+          score-=10
+          document.getElementById("score").innerHTMl = score;
+          audio1.play()
+        }
+      }
+      GO()
+    }
+
+    function test5() {
+      if (Random == 5) {
+        audio2.play()
+        score+=time;
+        document.getElementById("score").innerHTMl = score;
+      }
+      else {
+        if (score > 1) {
+          document.getElementById("score").innerHTML = score;
+          score-=10;
+          audio1.play()
+        }
+      }
+      GO()
+    }
+
+    setInterval(countdown, 100)
+
+    function countdown() {
+      time-=1;
+    }
+ 
+
+    
+  </script>
+  <style>
+
+    html {
+      background-image:url("https://images.pond5.com/4k-particles-navy-blue-background-086897506_prevstill.jpeg")
+    }
+
+    h2 {
+      font-family:'Outfit',sans-serif;
+      text-align:center;
+      color:white;
+    }
+
+    h3 {
+      font-family:'Outfit',sans-serif;
+      text-align:center;
+      color:white;
+    }
+
+    button {
+      margin:auto;
+      width:30%;
+      height:100px;
+      text-align:center;
+      border:10px solid black;
+      background-color:blue;
+      font-size:30px;
+      color:white;
+    }
+
+    div {
+      display:flex;
+    }
+
+    button:hover {
+      background:darkblue;
+    }
+  </style>
+</body>
+
+</html>
